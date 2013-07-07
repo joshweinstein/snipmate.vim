@@ -152,10 +152,10 @@ snippet sct
 snippet scf
 	spyOn(${1:object}, "${2:method}").andCallFake(${3:function});${4}
 snippet esc
-	expect(${1:target}).wasCalled();${2}
+	expect(${1:target}).toHaveBeenCalled();${2}
 snippet escw
-	expect(${1:target}).wasCalledWith(${2:arguments});${3}
+	expect(${1:target}).toHaveBeenCalledWith(${2:arguments});${3}
 snippet notsc
-	expect(${1:target}).wasNotCalled();${2}
+	expect(${1:target}).not.toHaveBeenCalled();${2}
 snippet notscw
-	expect(${1:target}).wasNotCalledWith(${2:arguments});${3}
+	expect(${1:target}).not.toHaveBeenCalledWith(${2:arguments});${3}
