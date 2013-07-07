@@ -73,7 +73,24 @@ snippet get
 snippet gett
 	getElementBy${1:Id}('${2}')${3}
 
+
+#
 # Below are added by Josh
+#
+snippet cmd
+	AM.Commands.${1:namespace} = function(${2:params}) {
+		${3}
+	};
+
+	AM.Commands.$1.prototype = {
+		execute: function() {
+			${4}
+		},
+
+		undo: function() {
+		}
+	};
+
 snippet desc
 	describe("${1:context description or #method}", function() {
 		${2}
